@@ -2,7 +2,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let entry of form" (click)="onClick(entry)">
+    <ion-item *ngFor="let entry of form" (click)="onClick(entry)" [disabled]='entry.disabled'>
       <ion-label>{{entry.val}}</ion-label>
       <ion-checkbox [color]="entry.color" mode='ios' slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
     </ion-item>

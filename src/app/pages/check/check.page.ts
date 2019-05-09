@@ -9,7 +9,7 @@ export class CheckPage implements OnInit {
 
   constructor() { }
   public form = [
-    { val: 'Pepperoni', isChecked: true, color: 'danger', disabled: true },
+    { val: 'Pepperoni', isChecked: true, color: 'danger', disabled: false },
     { val: 'Sausage', isChecked: false, color: 'light', disabled: false },
     { val: 'Mushroom', isChecked: false, color: 'tertiary', disabled: true },
     { val: 'Mushroom', isChecked: false, color: 'success', disabled: false } 
