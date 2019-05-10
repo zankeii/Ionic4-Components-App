@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'buttons', loadChildren: './pages/buttons/buttons.module#ButtonsPageModule' },
   { path: 'cards', loadChildren: './pages/cards/cards.module#CardsPageModule' },
   { path: 'check', loadChildren: './pages/check/check.module#CheckPageModule' },
+  { path: 'date-time', loadChildren: './pages/date-time/date-time.module#DateTimePageModule' },
 ];
 
 @NgModule({
