@@ -15,5 +15,31 @@
                     (ionChange)="cambioFecha($event)">
       </ion-datetime>
     </ion-item>
+
+    <ion-list-header>
+      <ion-label>Restricciones</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Min Y Max</ion-label>
+      <ion-datetime placeholder="yyyy-mm-dd"
+                    displayFormat="YYYY MMM DD"
+                    min="2015-01-01" max="2015-12-31">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Years</ion-label>
+      <ion-datetime placeholder="YYYY"
+                    displayFormat="YYYY"
+                    min="1950" max="2050">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Custom Date</ion-label>
+      <ion-datetime [pickerOptions]="customPickerOptions"
+                    [(ngModel)]="customDate">
+      </ion-datetime>
+    </ion-item>
   </ion-list>
 </ion-content>
