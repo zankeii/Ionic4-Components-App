@@ -9,7 +9,6 @@
   },
   "files": [
     "test.ts",
-    "zone-flags.ts",
     "polyfills.ts"
   ],
   "include": [

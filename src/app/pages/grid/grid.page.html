@@ -1,33 +1,38 @@
-<app-header titulo="Grid Rows Cols"></app-header>
+<app-header titulo="Grid Row"></app-header>
 
 <ion-content padding fullscreen>
 
   <ion-grid fixed>
-    <!--<ion-row>
-      <ion-col *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1], let index =index">
-        {{index+1}}
+
+    <!-- <ion-row>
+      <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]; let i = index">
+        Hola, item {{ i + 1 }}
       </ion-col>
-    </ion-row>-->
+    </ion-row> -->
 
     <ion-row>
-      <ion-col size="12" sizeLg="3" sizeMd="4" sizeSm="6" sizeXs="12"
-              *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1]" >
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"  
+              *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1];">
+
         <ion-card>
           <ion-img src="/assets/shapes.svg"></ion-img>
+
           <ion-card-header>
             <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-title>Car Title</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Adipisci autem beatae delectus deleniti dignissimos dolorem
-            doloremque eligendi eveniet excepturi fugit inventore itaque maxime,
-            nostrum officia praesentium quam quibusdam repellat suscipit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi iusto obcaecati cupiditate aperiam blanditiis minima voluptatem dolore modi dignissimos, ab odio fugit vitae harum? Quidem, necessitatibus. Repellendus amet quo cupiditate.
           </ion-card-content>
         </ion-card>
+
+
       </ion-col>
     </ion-row>
 
+
+
   </ion-grid>
+
 
 </ion-content>

@@ -7,14 +7,49 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./alert.page.scss'],
 })
 export class AlertPage implements OnInit {
+
   titulo: string;
-  constructor(public alertController: AlertController) { }
+
+  constructor( public alertCtrl: AlertController ) { }
 
   ngOnInit() {
   }
 
+  async presentInput() {
+
+    const input = await this.alertCtrl.create({
+      header: 'Input',
+      subHeader: 'Ingrese su nombre:',
+      inputs: [
+        {
+          name: 'txtNombre',
+          type: 'text',
+          placeholder: 'Nombre'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'OK',
+          handler: ( data ) => {
+            console.log('Confirm Ok', data);
+            this.titulo = data.txtNombre;
+          }
+        }
+      ]
+    });
+
+    await input.present();
+
+  }
+
   async presentAlert() {
-    const alert = await this.alertController.create({
+    const alert = await this.alertCtrl.create({
       header: 'Alert',
       subHeader: 'Subtitle',
       message: 'This is an alert message.',
@@ -26,10 +61,11 @@ export class AlertPage implements OnInit {
           handler: (blah) => {
             console.log('Cancelar');
           }
-        }, {
-          text: 'Ok',
-          handler: () => {
-            console.log('Ok');
+        },
+        {
+            text: 'Ok',
+            handler: (blah) => {
+              console.log('Botón OK');
           }
         }
       ]
@@ -38,35 +74,4 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
-
-  async presentAlertPrompt() {
-    const alert = await this.alertController.create({
-      header: 'Name',
-      inputs: [
-        {
-          name: 'name1',
-          type: 'text',
-          placeholder: 'Enter Name'
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: () => {
-            console.log('Confirm Cancel');
-          }
-        }, {
-          text: 'Ok',
-          handler: (data) => {
-            this.titulo = data.name1;
-            console.log(data);
-
-          }
-        }
-      ]
-});
-  await alert.present();
-  }
 }

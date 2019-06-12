@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { GridPage } from './grid.page';
-import {ComponentsModule} from "../../components/components.module";
+import { ComponentsModule } from '../../components/components.module';
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-      ComponentsModule
+    ComponentsModule
   ],
   declarations: [GridPage]
 })

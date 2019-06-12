@@ -8,13 +8,13 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class ActionSheetPage implements OnInit {
 
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(private actionSheetCtrl: ActionSheetController ) { }
 
   ngOnInit() {
   }
 
   async presentActionSheet() {
-    const actionSheet = await this.actionSheetController.create({
+    const actionSheet = await this.actionSheetCtrl.create({
       header: 'Albums',
       backdropDismiss: false,
       buttons: [{
@@ -47,12 +47,12 @@ export class ActionSheetPage implements OnInit {
         text: 'Cancel',
         icon: 'close',
         role: 'cancel',
-        cssClass: 'rojo',
         handler: () => {
           console.log('Cancel clicked');
         }
       }]
     });
+
     await actionSheet.present();
   }
 

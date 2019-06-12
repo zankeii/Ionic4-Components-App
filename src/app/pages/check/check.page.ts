@@ -7,18 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckPage implements OnInit {
 
-  constructor() { }
-  public form = [
-    { val: 'Pepperoni', isChecked: true, color: 'danger', disabled: false },
-    { val: 'Sausage', isChecked: false, color: 'light', disabled: false },
-    { val: 'Mushroom', isChecked: false, color: 'tertiary', disabled: true },
-    { val: 'Mushroom', isChecked: false, color: 'success', disabled: false } 
+  data =  [
+    {
+      name: 'primary',
+      selected: false
+    },
+    {
+      name: 'secondary',
+      selected: true
+    },
+    {
+      name: 'tertiary',
+      selected: false
+    },
+    {
+      name: 'success',
+      selected: true
+    }
   ];
+
+
+
+  constructor() { }
 
   ngOnInit() {
   }
 
-  onClick(check) {
+  onClick( check ) {
     console.log(check);
   }
 

@@ -1,10 +1,19 @@
-<app-header titulo='CheckBox'></app-header>
+<app-header titulo="Checkbox"></app-header>
 
 <ion-content>
+
   <ion-list>
-    <ion-item *ngFor="let entry of form" (click)="onClick(entry)" [disabled]='entry.disabled'>
-      <ion-label>{{entry.val}}</ion-label>
-      <ion-checkbox [color]="entry.color" mode='ios' slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+
+    <ion-item *ngFor="let check of data"
+          (click)="onClick( check )">
+
+      <ion-label> {{ check.name }} </ion-label>
+      <ion-checkbox [(ngModel)]="check.selected" 
+                    [color]="check.name">
+      </ion-checkbox>
+
     </ion-item>
   </ion-list>
+
+
 </ion-content>

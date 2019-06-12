@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date-time.page.scss'],
 })
 export class DateTimePage implements OnInit {
+
   fechaNaci: Date = new Date();
   customPickerOptions;
-  customDate
+  customDate;
+
   constructor() { }
 
   ngOnInit() {
@@ -16,9 +18,9 @@ export class DateTimePage implements OnInit {
     this.customPickerOptions = {
       buttons: [{
         text: 'Save',
-        handler: ( event ) => {
+        handler: ( evento ) => {
           console.log('Clicked Save!');
-          console.log(event);
+          console.log(evento);
         }
       }, {
         text: 'Log',
@@ -28,11 +30,12 @@ export class DateTimePage implements OnInit {
         }
       }]
     };
-  }
-  cambioFecha() {
-    console.log('ionChange', event);
-    // console.log('Date', new Date( event.detail.value ));
+
   }
 
+  cambioFecha( event ) {
+    console.log('ionChange', event );
+    console.log('Date', new Date( event.detail.value ) );
+  }
 
 }

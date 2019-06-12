@@ -1,6 +1,7 @@
 <app-header titulo="Fabs"></app-header>
 
 <ion-content>
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
@@ -9,23 +10,33 @@
     <ion-fab-list side="top">
       <ion-fab-button color="facebook"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
       <ion-fab-button color="twitter"><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
-      <ion-fab-button color="youtube"><ion-icon name="logo-youtube"></ion-icon> </ion-fab-button>
+      <ion-fab-button color="youtube"><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
     </ion-fab-list>
 
+    <ion-fab-list side="start">
+      <ion-fab-button color="vimeo"><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+      <ion-fab-button color="google"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+      <ion-fab-button color="github"><ion-icon name="logo-github"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+
+
+
   </ion-fab>
-  <ion-fab vertical="top" edge="true" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+
+
+
   <ion-list>
-    <ion-item *ngFor="let i of data; let index =index">
-      Item {{index+1}}
+    <ion-item *ngFor="let i of data; let index = index">
+      Item {{ index + 1 }}
     </ion-item>
   </ion-list>
+
+
 </ion-content>
+
+
 <ion-footer>
-  <ion-toolbar color="youtube " text-center="center">
+  <ion-toolbar color="google">
     <ion-title>Este es el footer</ion-title>
   </ion-toolbar>
 </ion-footer>

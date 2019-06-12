@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { DateTimePage } from './date-time.page';
-import {ComponentsModule} from '../../components/components.module';
+import { ComponentsModule } from '../../components/components.module';
 
 const routes: Routes = [
   {
